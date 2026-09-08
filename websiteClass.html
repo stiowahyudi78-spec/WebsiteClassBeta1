@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Resmi VIII.A - MTs Norhidayah Pundu</title>
+
+    <!-- CSS (GAYA DAN TAMPILAN) -->
+    <style>
+        /* Reset & Font Dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif, Arial;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        /* 1. HEADER / KUNJUNGI WEBSITE KAMI */
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 35px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h3 {
+            font-size: 1.1rem;
+            color: #ffeb3b;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        header .sub-title {
+            background: rgba(255, 255, 255, 0.2);
+            display: inline-block;
+            padding: 4px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 5px;
+        }
+
+        /* Kontainer Utama */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        /* Card Section Umum */
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #2a5298;
+            display: inline-block;
+            padding-bottom: 3px;
+            font-size: 1.3rem;
+        }
+
+        /* 2. GALERI FOTO SISWA (SCROLL KE KIRI & KANAN) */
+        .gallery-container {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding-bottom: 10px;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .gallery-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .siswa-card {
+            flex: 0 0 140px;
+            scroll-snap-align: start;
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+        }
+
+        .siswa-card img {
+            width: 100%;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 8px;
+            background-color: #ddd;
+        }
+
+        .siswa-card p {
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-top: 8px;
+            color: #1e3c72;
+        }
+
+        .scroll-hint {
+            font-size: 0.8rem;
+            color: #777;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+
+        /* 3. STRUKTUR ORGANISASI KELAS */
+        .grid-struktur {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 12px;
+            text-align: center;
+        }
+
+        .struktur-item {
+            background: #eef2f5;
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 4px solid #2a5298;
+        }
+
+        .struktur-item h4 {
+            color: #2a5298;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .struktur-item p {
+            font-weight: bold;
+            font-size: 0.95rem;
+            margin-top: 4px;
+            color: #333;
+        }
+
+        /* 4. MOTIVASI DAN TUJUAN */
+        .motivasi-box {
+            background: #e3f2fd;
+            border-left: 5px solid #1e3c72;
+            padding: 12px 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            font-style: italic;
+            color: #0d47a1;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #333;
+            color: white;
+            margin-top: 30px;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. HEADER & DEDIKASI KELAS -->
+    <header>
+        <h3>Kunjungi Website Kami 👋</h3>
+        <h1>MTs Norhidayah Pundu</h1>
+        <div class="sub-title">Kelas VIII.A</div>
+    </header>
+
+    <div class="container">
+
+        <!-- 2. GALERI FOTO SISWA (SLIDER KANAN-KIRI) -->
+        <section class="card">
+            <h2>Wajah Siswa VIII.A (20 Siswa)</h2>
+            <p class="scroll-hint">👈 Geser/Scroll foto ke samping untuk melihat seluruh anggota 👉</p>
+            
+            <div class="gallery-container">
+                <!-- Foto 1 (Memakai File Gambar Lokal: husin.jpg) -->
+                <div class="siswa-card">
+                    <img src="husin.jpg" alt="Foto Husin">
+                    <p>Husin</p>
+                </div>
+                <!-- Foto 2 -->
+                <div class="siswa-card">
+                    <img src="https://via.placeholder.com/150?text=Siswa+2" alt="Foto Siswa">
+                    <p>Ujaini</p>
+                </div>
+                <!-- Foto 3 -->
+                <div class="siswa-card">
+                    <img src="https://via.placeholder.com/150?text=Siswa+3" alt="Foto Siswa">
+                    <p>Nadjwa</p>
+                </div>
+                <!-- Foto 4 -->
+                <div class="siswa-card">
+                    <img src="https://via.placeholder.com/150?text=Siswa+4" alt="Foto Siswa">
+                    <p>Siswa 4</p>
+                </div>
+                <!-- Foto 5 -->
+                <div class="siswa-card">
+                    <img src="https://via.placeholder.com/150?text=Siswa+5" alt="Foto Siswa">
+                    <p>Siswa 5</p>
+                </div>
+                <!-- Foto 6 -->
+                <div class="siswa-card">
+                    <img src="https://via.placeholder.com/150?text=Siswa+6" alt="Foto Siswa">
+                    <p>Siswa 6</p>
+                </div>
+                <!-- Foto 7 -->
+                <div class="siswa-card">
+                    <img src="https://via.placeholder.com/150?text=Siswa+7" alt="Foto Siswa">
+                    <p>Siswa 7</p>
+                </div>
+                <!-- Foto 8 -->
+                <div class="siswa-card">
+                    <img src="https://via.placeholder.com/150?text=Siswa+8" alt="Foto Siswa">
+                    <p>Siswa 8</p>
+                </div>
+                <!-- Foto 9 -->
+                <div class="siswa-card">
+                    <img src="https://via.placeholder.com/150?text=Siswa+9" alt="Foto Siswa">
+                    <p>Siswa 9</p>
+                </div>
+                <!-- Foto 10 -->
+                <div class="siswa-card">
+                    <img src="https://via.placeholder.com/150?text=Siswa+10" alt="Foto Siswa">
+                    <p>Siswa 10</p>
+                </div>
+                <!-- Foto 11 -->
+                <div class="siswa-card">
+                    <img src="https://via.placeholder.com/150?text=Siswa+11" alt="Foto Siswa">
+                    <p>Siswa 11</p>
+                </div>
+                <!-- Foto 12 -->
+                <div class="siswa-card">
+                    <img src="https://via.placeholder.com/150?text=Siswa+12" alt="Foto Siswa">
+                    <p>Siswa 12</p>
+                </div>
+                <!-- Foto 13 -->
+                <div class="siswa-card">
+                    <img src="https://via.placeholder.com/150?text=Siswa+13" alt="Foto Siswa">
+                    <p>Siswa 13</p>
+                </div>
+                <!-- Foto 14 -->
+                <div class="siswa-card">
+                    <img src="https://via.placeholder.com/150?text=Siswa+14" alt="Foto Siswa">
+                    <p>Siswa 14</p>
+                </div>
+                <!-- Foto 15 -->
+                <div class="siswa-card">
+                    <img src="https://via.placeholder.com/150?text=Siswa+15" alt="Foto Siswa">
+                    <p>Siswa 15</p>
+                </div>
+                <!-- Foto 16 -->
+                <div class="siswa-card">
+                    <img src="https://via.placeholder.com/150?text=Siswa+16" alt="Foto Siswa">
+                    <p>Siswa 16</p>
+                </div>
+                <!-- Foto 17 -->
+                <div class="siswa-card">
+                    <img src="https://via.placeholder.com/150?text=Siswa+17" alt="Foto Siswa">
+                    <p>Siswa 17</p>
+                </div>
+                <!-- Foto 18 -->
+                <div class="siswa-card">
+                    <img src="https://via.placeholder.com/150?text=Siswa+18" alt="Foto Siswa">
+                    <p>Siswa 18</p>
+                </div>
+                <!-- Foto 19 -->
+                <div class="siswa-card">
+                    <img src="https://via.placeholder.com/150?text=Siswa+19" alt="Foto Siswa">
+                    <p>Siswa 19</p>
+                </div>
+                <!-- Foto 20 -->
+                <div class="siswa-card">
+                    <img src="https://via.placeholder.com/150?text=Siswa+20" alt="Foto Siswa">
+                    <p>Siswa 20</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. STRUKTUR ORGANISASI KELAS -->
+        <section class="card">
+            <h2>Struktur Organisasi Kelas</h2>
+            <div class="grid-struktur">
+                <div class="struktur-item">
+                    <h4>Wali Kelas</h4>
+                    <p>Ibu Halimatus</p>
+                </div>
+                <div class="struktur-item">
+                    <h4>Ketua Kelas</h4>
+                    <p>Husin</p>
+                </div>
+                <div class="struktur-item">
+                    <h4>Wakil Kelas</h4>
+                    <p>Ujaini</p>
+                </div>
+                <div class="struktur-item">
+                    <h4>Sekretaris</h4>
+                    <p>Afika</p>
+                </div>
+                <div class="struktur-item">
+                    <h4>Bendahara</h4>
+                    <p>Nazjwa</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. MOTIVASI & TUJUAN WEBSITE -->
+        <section class="card">
+            <h2>Motivasi & Tujuan Website</h2>
+            
+            <div class="motivasi-box">
+                "Belajar bersama, saling merangkul, dan mengukir prestasi demi masa depan yang cerah."
+            </div>
+
+            <p><strong>Tujuan Dibangunnya Website Ini:</strong></p>
+            <p>Website ini dikembangkan secara mandiri sebagai ruang digital resmi untuk mempererat kebersamaan dan identitas seluruh warga kelas VIII.A MTs Norhidayah Pundu. Selain itu, platform ini hadir sebagai wujud nyata kreativitas siswa dalam memanfaatkan teknologi secara positif di lingkungan sekolah.</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Kelas VIII.A MTs Norhidayah Pundu | Dikelola Mandiri via Acode</p>
+    </footer>
+
+</body>
+</html>
